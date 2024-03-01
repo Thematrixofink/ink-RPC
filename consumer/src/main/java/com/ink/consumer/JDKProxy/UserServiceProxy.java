@@ -1,4 +1,4 @@
-package com.ink.consumer;
+package com.ink.consumer.JDKProxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;

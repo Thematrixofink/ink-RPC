@@ -3,6 +3,8 @@ package com.ink.consumer;
 
 import com.ink.common.model.User;
 import com.ink.common.service.UserService;
+import com.ink.consumer.CGlib.CGlibServiceProxyFactory;
+import com.ink.consumer.JDKProxy.ServiceProxyFactory;
 
 /**
  * 简单的服务消费者实例
@@ -13,7 +15,8 @@ public class ServiceConsumer
     public static void main( String[] args )
     {
         //获取UserService的实例对象
-        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+        //UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+        UserService userService = CGlibServiceProxyFactory.getProxy(UserService.class);
 
         User user = new User("ink");
         //调用提供的服务
